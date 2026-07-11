@@ -1,4 +1,4 @@
-Kenapa Reduksi Dimensi (PCA) Tidak Diterapkan
+# Kenapa Reduksi Dimensi (PCA) Tidak Diterapkan
 
 ## Konteks singkat
 
