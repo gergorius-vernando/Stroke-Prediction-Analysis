@@ -1,4 +1,4 @@
-Feature Selection — Metode & Alasan Keputusan
+# Feature Selection — Metode & Alasan Keputusan
 
 ## 1. Kenapa Filter + Embedded (bukan Wrapper)?
 
@@ -77,22 +77,3 @@ Ada 3 keluarga metode feature selection: **Filter** (cek tiap fitur sendiri-send
 | Fitur | Alasan |
 |---|---|
 | `ever_married`, `work_type` | p<0,05 dan RF importance lumayan, TAPI: 0 orang di bawah 18 tahun yang berstatus menikah — usia sendirian sudah hampir cukup buat nebak status ini. Informasinya sebagian besar tumpang tindih dengan `age`, sehingga kontribusi tambahannya kecil dan berisiko menyebabkan multikolinearitas di Logistic Regression |
-
----
-
-## 6. Ringkasan Alur Keputusan (per fitur)
-
-```
-1. Uji statistik (Chi-square / Mann-Whitney) → hasilkan p-value
-2. p < 0,05?
-   TIDAK → dibuang  (gender, Residence_type)
-   YA    → lanjut ke langkah 3
-3. Cek kekuatan hubungan (r, RF importance, Mutual Information)
-4. Cek akal sehat domain: apakah hubungan ini masuk akal secara medis,
-   atau cuma numpang sinyal dari fitur lain (proxy)?
-   Proxy/meragukan → dibuang dengan catatan (ever_married, work_type)
-   Jelas & langsung  → PERTAHANKAN (age, glucose, bmi, hypertension,
-                        heart_disease, smoking_status)
-```
-
-**Intinya:** tidak ada satupun metode yang dipakai sendirian untuk memutuskan — keputusan akhir selalu hasil **triangulasi** (bukti statistik + bukti model + akal sehat domain), supaya tidak salah kaprah seperti kasus `ever_married` yang "kelihatan penting" secara angka tapi sebenarnya cuma bayangan dari `age`.

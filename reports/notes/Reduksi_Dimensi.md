@@ -39,9 +39,3 @@ Supaya argumen "tidak perlu" ini kuat, penting juga menyebutkan kapan PCA *akan*
 Ketiga kondisi ini **tidak berlaku** di project ini, memperkuat keputusan untuk melewati tahap reduksi dimensi.
 
 ---
-
-## Kalimat siap pakai untuk paper
-
-```markdown
-Reduksi dimensi (PCA) tidak diterapkan pada penelitian ini dengan tiga pertimbangan utama. Pertama, jumlah fitur final setelah proses feature selection hanya enam fitur, sehingga kompleksitas komputasi yang menjadi motivasi utama PCA tidak relevan. Kedua, pengecekan correlation matrix menunjukkan tidak adanya multikolinearitas signifikan antar fitur (korelasi tertinggi 0,32, jauh di bawah ambang batas 0,7-0,8), sehingga tidak ditemukan redundansi informasi yang perlu direduksi. Ketiga, PCA mengubah fitur asli menjadi kombinasi linear yang kehilangan interpretasi klinis langsung, sementara kemampuan menjelaskan kontribusi tiap fitur secara eksplisit merupakan aspek penting dalam penelitian di bidang kesehatan.
-```
